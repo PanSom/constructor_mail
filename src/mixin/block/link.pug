@@ -1,0 +1,8 @@
+mixin link(href)
+	a(
+		href=href,
+		target='_blank',
+		style='color: #008bb0; text-decoration: underline',
+		class=href ? "" : "error-link"
+	)
+		block

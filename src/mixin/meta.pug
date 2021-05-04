@@ -1,0 +1,100 @@
+mixin meta(title)
+	if !title
+		- var title = "University of Toronto"
+	doctype html
+	html(
+		lang='en',
+		xmlns='http://www.w3.org/1999/xhtml',
+		xmlns:v='urn:schemas-microsoft-com:vml',
+		xmlns:o='urn:schemas-microsoft-com:office:office'
+	)
+		head
+			meta(
+				charset='utf-8'
+			)
+			meta(
+				name='viewport',
+				content='width=device-width'
+			)
+			meta(
+				http-equiv='X-UA-Compatible',
+				content='IE=edge'
+			)
+			meta(
+				name='x-apple-disable-message-reformatting'
+			)
+			meta(
+				name='format-detection',
+				content='telephone=no,address=no,email=no,date=no,url=no'
+			)
+			title= title
+			|
+			|
+			<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+			|
+			|
+			<!--[if mso]>
+			style * { font-family: arial, sans-serif !important;}
+			|
+			|
+			<![endif]-->
+			style 
+				include ../css/style.css
+			|
+			|
+			<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+			|
+			<!--[if gte mso 9]>
+			xml
+				| <o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings>
+			|
+			|
+			<![endif]-->
+			style 
+				include ../css/style_media.css
+			|
+			|
+		|
+		| <!--
+		| The email background color (#f3f4f7) is defined in three places:
+		| 1. body tag: for most email clients
+		| 2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, |GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+		| 3. mso conditional: For Windows 10 Mail
+		| -->
+		body(
+			width='100%',
+			style='margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f3f4f7'
+		)
+			center(
+				style='width: 100%; background-color: #f3f4f7'
+			)
+				| <!--[if mso | IE]>
+				| <table role="presentation" border="0" cellpadding="0" |cellspacing="0" width="100%" style="background-color: #f3f4f7;">
+				| <tr>
+				| <td>
+				| <![endif]-->
+				|
+				|
+				block
+				|
+				|
+				|
+				| <!--[if mso | IE]>
+				| </td>
+				| </tr>
+				| </table>
+				| <![endif]-->
+			style(
+				data-ignore-inlining
+			)
+				include ../css/style_footer.css
+			|
+			|
+			#_t
+			img(
+				src='https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?d=##OptionalParameter3##',
+				width='1',
+				height='1',
+				border='0',
+				alt=''
+			) 

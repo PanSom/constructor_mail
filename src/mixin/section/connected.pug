@@ -1,0 +1,89 @@
+mixin connected
+	tr 
+		td
+			table(
+				cellspacing='0',
+				cellpadding='0',
+				border='0',
+				width='100%'
+			)
+				+headline('STAY CONNECTED')
+				block
+mixin connected__header
+	tr 
+		td(
+			style='background-color: #ffffff; padding: 30px 30px 20px; text-align: left; font-size: 14px; font-family: arial, sans-serif; line-height: 20px'
+		)
+			block
+mixin connected__container
+	tr 
+		td(
+			style='background-color: #ffffff; padding: 0 20px 30px'
+		)
+			table(
+				cellspacing='0',
+				cellpadding='0',
+				border='0',
+				width='100%'
+			)
+				tbody 
+					tr
+						td.content(
+							style='padding-bottom: 10px; text-align: left; font-size: 14px; font-family: arial, sans-serif; line-height: 20px'
+						)
+							| <!--[if mso]>
+							| <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+							| <tr>
+							| <![endif]-->
+							block
+							| <!--[if mso]>
+							| </tr>
+							| </table>
+							| <![endif]-->
+
+mixin connected__item(img)
+	| <!--[if mso]>
+	| <td valign="top" width="211">
+	| <![endif]-->
+	.stack-column(
+		style='display: inline-block; margin: 0 -1px; max-width: 211px; min-width: 160px; vertical-align: top; width: 100%'
+	)
+		table(
+			role='presentation',
+			cellspacing='0',
+			cellpadding='0',
+			border='0',
+			width='100%'
+		)
+			tbody
+				tr
+					td(
+						style='padding: 10px'
+					)
+						table(
+							role='presentation',
+							cellspacing='0',
+							cellpadding='0',
+							border='0',
+							width='100%',
+							style='font-size: 14px; text-align: left'
+						)
+							tbody
+								tr
+									td
+										img.center-on-narrow(
+											src=img,
+											width='191',
+											height='',
+											border='0',
+											alt='alt_text',
+											style='width: 100%; max-width: 191px; height: auto; background: #dddddd; font-family: arial; font-size: 14px; line-height: 18px'
+										)
+								tr
+									td.stack-column-center(
+										style='font-family: arial; font-size: 14px; line-height: 18px; padding-top: 10px'
+									)
+										block
+	| <!--[if mso]>
+	| </td>
+	| <![endif]-->

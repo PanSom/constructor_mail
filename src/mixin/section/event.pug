@@ -1,0 +1,58 @@
+mixin event(json)
+	br
+	table.events-listing(
+		cellspacing='0',
+		cellpadding='0',
+		border='0',
+		align='center',
+		width='290',
+		style='width: 100%'
+	)
+		tbody
+			tr
+				if (json.day)
+					td(
+						valign='middle',
+						align='center',
+						width='75'
+					)
+						table(
+							cellspacing='0',
+							cellpadding='0',
+							border='0',
+							width='75'
+						)
+							tbody
+								tr
+									td(
+										valign='middle',
+										align='center',
+										width='35',
+										height='45',
+										style='text-align: center; color: #ffffff; background-color: #25355a; padding: 15px 10px; width: 40px; font-family: arial, sans-serif'
+									)
+										span(
+											style='font-size: 15px; line-height: 15px; text-transform: uppercase'
+										)
+											| #{json.month}
+										br
+										span(
+											style='font-weight: 700; font-size: 24px; line-height: 24px'
+										)
+											| #{json.day}
+					td.divider(
+						width='15'
+					)
+				td(
+					valign='top',
+					style='font-size: 14px; line-height: 22px; text-align: left; font-family: arial, sans-serif'
+				)
+					strong(
+						style='font-size: 22px; line-height: 28px; color: #25355a'
+					)
+						| #{json.title}
+					br
+					strong
+						| #{json.subtitle}
+	br
+	block

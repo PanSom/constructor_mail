@@ -1,0 +1,43 @@
+mixin section(title)
+	tr 
+		td
+			table(
+				cellspacing='0',
+				cellpadding='0',
+				border='0',
+				width='100%'
+			)
+				+headline(title)
+				tr 
+					td(
+						style='background-color: #ffffff; padding: 20px 30px'
+					)
+						table(
+							cellspacing='0',
+							cellpadding='0',
+							border='0',
+							width='100%'
+						)
+							tbody 
+								tr
+									td.content(
+										style='padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px'
+									)
+										block
+mixin section__no-hader(style)
+	tr 
+		td(
+			style=style
+		)
+			table(
+				cellspacing='0',
+				cellpadding='0',
+				border='0',
+				width='100%'
+			)
+				tbody 
+					tr
+						td.content(
+							style='padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px'
+						)
+							block

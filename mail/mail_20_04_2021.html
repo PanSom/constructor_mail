@@ -1,0 +1,365 @@
+<!-- block--><!-- template--><!-- section--><!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="x-apple-disable-message-reformatting"><meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"><title>University of Toronto</title>
+<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+<!--[if mso]><style>* { font-family: arial, sans-serif !important;}</style>
+<![endif]--><style> /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+	u ~ div .email-container {
+		min-width: 320px !important;
+	}
+}
+
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+	u ~ div .email-container {
+		min-width: 375px !important;
+	}
+}
+
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+	u ~ div .email-container {
+		min-width: 414px !important;
+	}
+}
+
+/* What it does: Remove spaces around the email design added by some email clients. */
+
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,
+body {
+	margin: 0 auto !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*='margin: 16px 0'] {
+	margin: 0 !important;
+}
+
+/* What it does: forces Samsung Android mail clients to use the entire viewport */
+#MessageViewBody,
+#MessageWebViewDiv {
+	width: 100% !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+	text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+a[x-apple-data-detectors],
+			/* iOS */
+			.unstyle-auto-detected-links a,
+			.aBn {
+	border-bottom: 0 !important;
+	cursor: default !important;
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+	color: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+	display: none !important;
+	opacity: 0.01 !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+	display: none !important;
+}
+
+a.error-link {
+	font-weight: 700;
+	color: red !important;
+}
+</style>
+<!-- What it does: Makes background images in 72ppi Outlook render at correct size. --><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]--><style> /* Media Queries */
+@media screen and (max-width: 480px) {
+	/* What it does: Forces table cells into full-width rows. */
+	.stack-column,
+	.stack-column-center {
+		display: block !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		direction: ltr !important;
+	}
+
+	/* And center justify these ones. */
+	.stack-column-center {
+		text-align: center !important;
+	}
+
+	/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+	.center-on-narrow {
+		text-align: center !important;
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		float: none !important;
+	}
+
+	.pl-0-on-narrow {
+		padding-left: 0px !important;
+	}
+
+	.prl-0-on-narrow {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	table.center-on-narrow {
+		display: inline-block !important;
+	}
+
+	/* What it does: Adjust typography on small screens to improve readability */
+	.email-container p {
+		font-size: 17px !important;
+	}
+}
+
+/* What it does: Hover styles for buttons */
+.button-td,
+.button-a {
+	transition: all 100ms ease-in;
+}
+
+.button-td-primary:hover,
+.button-a-primary:hover {
+	background: #555555 !important;
+	border-color: #555555 !important;
+}
+</style>
+</head>
+<!--
+The email background color (#f3f4f7) is defined in three places:
+1. body tag: for most email clients
+2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, |GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+3. mso conditional: For Windows 10 Mail
+--><body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f3f4f7"><center style="width: 100%; background-color: #f3f4f7"><!--[if mso | IE]>
+<table role="presentation" border="0" cellpadding="0" |cellspacing="0" width="100%" style="background-color: #f3f4f7;">
+<tr>
+<td>
+<![endif]-->
+
+<!-- Visually Hidden Preheader Text : BEGIN --><div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: arial, sans-serif">Plus, Dentistry’s Great Alumni Event goes virtual</div>
+<!-- Visually Hidden Preheader Text : END -->
+<!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+<!-- Preview Text Spacing Hack : BEGIN -->
+<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: arial, sans-serif">&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div><!--
+Set the email width. Defined in two places:
+1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 680px.
+2. MSO tags for Desktop Windows Outlook enforce a 680px width.
+Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.
+--><div class="email-container" style="max-width: 680px; margin: 0 auto"><!--[if mso]>
+<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680">
+<tr>
+<td>
+<![endif]-->
+
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto"><tr><td style="background-color: #ffffff; padding: 0 10px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr> <td valign="top" style="text-align: center; padding-bottom: 20px; padding-top: 10px; font-family: Arial; background-color: #ffffff; border-bottom: 1px solid #002a5c"><a href="##HTMLNewsletterURL##" style="text-decoration: none !important; color: #000000; font-size: 12px"><strong>View this email online</strong></a></td></tr><tr><td valign="top" style="text-align: center; padding-bottom: 10px; padding-top: 10px; color: #002a5c; font-size: 14px; line-height: 14px; font-family: arial; background-color: #ffffff; border-bottom: 1px solid #002a5c"><strong>APRIL 2021</strong></td></tr><tr><td style="text-align: center; padding: 20px 30px" width="100%" valign="top"><a href="##TrackClick##https://www.dentistry.utoronto.ca/" target="_blank" style="color: #007fa3"><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/04/Dentistry.jpg" style="border: 0 !important; width: 100%; height: auto" alt="University of Toronto, Faculty of Dentistry Logo"></a></td></tr></table></td></tr><!-- body start--><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td style="background-color: #ffffff; padding: 0px 30px 20px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://engage.utoronto.ca/site/SPageServer?pagename=donate#/faculty/5" style="background: #007fa3; border: 1px solid #007fa3; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #ffffff; display: block; border-radius: 0px; text-transform: uppercase">Donate</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">A message from Selina Esteves</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px">This issue marks the thirteenth we have prepared for our alumni family. Over the last year, we have loved sharing your stories. Next month, I look forward to hearing more about how you are all doing at our first-ever virtual Great Alumni Event.<br/><br/> In this issue, we recognize five accomplished students who make life at U of T Dentistry more engaging and accessible through their dedication and service. We hear stories from the front line of alumni who have received their vaccines. We look at how researchers in our Faculty are working to better understand COVID-19, and how our leaders are advocating on behalf of the dental profession. While it may feel like it has been a long year, I hope you’ll agree that the efforts of our students and our alumni are a beacon as the light on the horizon grows brighter.<br/><br/>Sincerely,<br>Selina Esteves<br>Director, Advancement and Alumni Relations</td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">THE GREAT ALUMNI EVENT: HOME EDITION</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_Great_Alumni_Home_Edition.jpg" width="290" height="210" border="0" alt="Unwind and reconnect from the comfort of your home." style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/the-great-alumni-event" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px"><em> Unwind and reconnect from the comfort of your home.</em></a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000"> <strong style="color: #007fa3">Dentistry’s biggest alumni event of the year is going virtual.</strong><br/><br/>The 2021 edition of the Great Alumni Event promises to be a lot more than a cocktail party. From a complimentary CDE course to cooking with celebrity chef Bonnie Stern, from a young alumni panel to family activities, we’re bringing the fun of Dentistry’s alumni reunion to your home.</td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/the-great-alumni-event" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">VIEW ALL EVENTS</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table></td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">OUR ALUMNI COMMUNITY</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/UTSLA_Banner_for_Alumni_Newsletter_(April).jpg" width="290" height="210" border="0" alt="Recognizing student leadership at U of T Dentistry" style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/news/recognizing-student-leadership-u-t-dentistry" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px">Recognizing student leadership at U of T Dentistry</a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000">Five Faculty of Dentistry students earn the University of Toronto Student Leadership Award (UTSLA) in recognition of their outstanding leadership, service, and commitment to the university and the Faculty. </td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/news/recognizing-student-leadership-u-t-dentistry" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">Read more</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_Great_alumni_story.jpg" width="290" height="210" border="0" alt="Dentistry's Great Alumni Event: Home Edition" style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/news/dentistrys-great-alumni-event-home-edition" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px">Dentistry's Great Alumni Event: Home Edition</a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000">This May, we’re celebrating our Great Alumni Event in a completely reimagined way. Dentistry's biggest alumni event of the year is going virtual.</td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/news/dentistrys-great-alumni-event-home-edition" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">Read more</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_advocating.jpg" width="290" height="210" border="0" alt="Advocating for the profession" style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/news/advocating-profession" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px">Advocating for the profession</a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000">How did leaders advocate for the dental profession during the pandemic? Unusual times called for renewed efforts to get dentistry prioritized.</td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/news/advocating-profession" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">Read more</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table></td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">NEWS &amp; UPDATES</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_Immunity.jpg" width="290" height="210" border="0" alt="Measuring immunity at dental schools" style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/news/measuring-immunity-dental-schools" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px">Measuring immunity at dental schools</a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000">A new cross-country study will track immune responses in students and more.</td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/news/measuring-immunity-dental-schools" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">Read more</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table><!-- ---------------------------------------------------------------------><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr> <td align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 20px 0 0"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_Vaccines.jpg" width="290" height="210" border="0" alt="Vaccines help dentistry keep serving patients" style="width: 100%; max-width: 290px; height: auto; background: #ffffff"></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 0 0 20px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td valign="top" style="padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial"><a href="https://www.dentistry.utoronto.ca/news/vaccines-help-dentistry-keep-serving-patients" target="_blank" style="font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px">Vaccines help dentistry keep serving patients</a></td></tr><tr> <td valign="top" style="padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000">Eagerly awaited shots for dental professionals change stress levels but not practice.</td></tr><tr><td style="font-family: Arial; padding-top: 10px"><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://www.dentistry.utoronto.ca/news/vaccines-help-dentistry-keep-serving-patients" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">Read more</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table></td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">ONLINE EVENTS &amp; ACTIVITIES</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"><br><table class="events-listing" cellspacing="0" cellpadding="0" border="0" align="center" width="290" style="width: 100%"><tbody><tr><td valign="middle" align="center" width="75"><table cellspacing="0" cellpadding="0" border="0" width="75"><tbody><tr><td valign="middle" align="center" width="35" height="45" style="text-align: center; color: #ffffff; background-color: #25355a; padding: 15px 10px; width: 40px; font-family: arial, sans-serif"><span style="font-size: 15px; line-height: 15px; text-transform: uppercase">Apr</span><br><span style="font-weight: 700; font-size: 24px; line-height: 24px">22</span></td></tr></tbody></table></td><td class="divider" width="15"></td><td valign="top" style="font-size: 14px; line-height: 22px; text-align: left; font-family: arial, sans-serif"><strong style="font-size: 22px; line-height: 28px; color: #25355a">Advocating for the profession: an organized dentistry discussion</strong><br><strong>A live webinar</strong></td></tr></tbody></table><br> This virtual event is hosted by the University of Toronto Faculty of Dentistry’s Office of Advancement.<br/><br/> Join us for a special webinar featuring the ODA, RCDSO, and CDA as we discuss their role in advocating for the dental profession through the pandemic and answer your questions.<br/><br/><strong style="color: #007fa3"><em>Learn</em></strong>
+more about organized dentistry’s advocacy role in the early days of the pandemic.
+<strong style="color: #007fa3"><em>Discover</em></strong>
+how dentists were included in early-stage vaccine rollouts.
+<strong style="color: #007fa3"><em>Hear</em></strong>
+about how the pandemic recovery is progressing.<br/><br/><!-- Button --><table class="center-on-narrow" role="presentation" cellspacing="0" cellpadding="0" border="0" style="float: left; padding: 10px 0"><tbody><tr><td class="button-td" style="border-radius: 0px; background: #ffffff"><a class="button-a" target="_blank" href="https://zoom.us/webinar/register/8016166869253/WN_hGi9ehLYSfqMbutnTCZeww" style="background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase">REGISTER</a></td></tr></tbody></table><div class="clearfix" style="clear: both;"></div></td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">VIRTUAL ALUMNI REUNIONS</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: Arial; line-height: 20px"> <strong style="color: #007fa3">Thinking of planning a virtual DDS Class reunion?</strong><br/><br/>The Faculty of Dentistry’s Office of Advancement (Alumni Relations) is happy to provide you with a list of class email addresses to help you plan your event.<br>Contact us at
+<a href="mailto:alumni@dentistry.utoronto.ca" target="_blank" style="color: #008bb0; text-decoration: underline">alumni@dentistry.utoronto.ca</a>
+to get started.</td></tr></tbody></table></td></tr></table></td></tr><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><!-- -----------------------------------------------------------------------><tr> <td><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="background-color: #ffffff; padding: 0 30px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td valign="middle" align="center" width="100%" style="font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%"><strong style="text-transform: uppercase">STAY CONNECTED</strong></td></tr></tbody></table></td></tr><tr> <td style="background-color: #ffffff; padding: 30px 30px 20px; text-align: left; font-size: 14px; font-family: arial, sans-serif; line-height: 20px">We want to hear from you!
+<strong>Inspire your community.</strong>
+Share your stories, updates, publications, accomplishments, or exciting news at
+<a href="mailto:alumni@dentistry.utoronto.ca" target="_blank" style="color: #008bb0; text-decoration: underline">alumni@dentistry.utoronto.ca</a>.</td></tr><tr> <td style="background-color: #ffffff; padding: 0 20px 30px"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tbody> <tr><td class="content" style="padding-bottom: 10px; text-align: left; font-size: 14px; font-family: arial, sans-serif; line-height: 20px"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign="top" width="211">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; max-width: 211px; min-width: 160px; vertical-align: top; width: 100%"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 10px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/04/Newsletter_In_case_you_missed_it.jpg" width="191" height="" border="0" alt="alt_text" style="width: 100%; max-width: 191px; height: auto; background: #dddddd; font-family: arial; font-size: 14px; line-height: 18px"></td></tr><tr><td class="stack-column-center" style="font-family: arial; font-size: 14px; line-height: 18px; padding-top: 10px">In case you missed it! <br/><br/><a href="https://www.youtube.com/watch?v=EZ4mZBux3m8&amp;t=1s" target="_blank" style="color: #008bb0; text-decoration: underline">Watch</a>
+<em>ositioning the Faculty for the future: U of T Dentistry’s new satellite clinic.</em><br/><br/>This special webinar features faculty project leads sharing details about the new satellite clinic, upcoming plans for 124 Edward Street.</td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<![endif]--><!-- -------------------------------------------------------------------><!--[if mso]>
+<td valign="top" width="211">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; max-width: 211px; min-width: 160px; vertical-align: top; width: 100%"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 10px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/connected-2.jpg" width="191" height="" border="0" alt="alt_text" style="width: 100%; max-width: 191px; height: auto; background: #dddddd; font-family: arial; font-size: 14px; line-height: 18px"></td></tr><tr><td class="stack-column-center" style="font-family: arial; font-size: 14px; line-height: 18px; padding-top: 10px"> Interested in receiving invitations to our webinars and live events, or the newest issue of the U of T Dentistry magazine?<br/><br/><a href="https://secureca.imodules.com/s/731/form-blank/index.aspx?sid=731&amp;gid=1&amp;pgid=11544&amp;cid=19864" target="_blank" style="color: #008bb0; text-decoration: underline">Update</a>
+your contact information.</td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<![endif]--><!-- -------------------------------------------------------------------><!--[if mso]>
+<td valign="top" width="211">
+<![endif]--><div class="stack-column" style="display: inline-block; margin: 0 -1px; max-width: 211px; min-width: 160px; vertical-align: top; width: 100%"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 10px"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left"><tbody><tr><td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/connected-1.jpg" width="191" height="" border="0" alt="alt_text" style="width: 100%; max-width: 191px; height: auto; background: #dddddd; font-family: arial; font-size: 14px; line-height: 18px"></td></tr><tr><td class="stack-column-center" style="font-family: arial; font-size: 14px; line-height: 18px; padding-top: 10px"> Stay connected with your friends and colleagues.<br/><br/><a href="https://www.facebook.com/groups/uoftdentistryalumni" target="_blank" style="color: #008bb0; text-decoration: underline">Join</a>
+our Facebook group.</td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]--></td></tr></tbody></table></td></tr></table></td></tr><!-- body end--><!-- Divider Wrap --><tr><td style="padding: 0 10px 0px 10px; background-color: #ffffff"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important"><tbody><tr><td align="center" valign="top" width="100%" height="1" style="background-color: #000000; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 1px"><!--[if gte mso 15]>&nbsp;<![endif]--></td></tr></tbody></table></td></tr>
+<!-- Footer 2 Columns --><tr><td align="center" valign="top" style="font-size: 0; padding: 0px 30px; background-color: #ffffff"><!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+<tr>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column-center" style="display: inline-block; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td class="stack-column-center" style="padding-top: 20px; font-family: arial; font-size: 13px; color: #666666" align="left"><a href="##TrackClick##https://www.dentistry.utoronto.ca/" target="_blank" style="color: #008bb0"><img src="https://alumni.utoronto.ca/sites/default/files/inline-images/dentistry-logo-small.jpg" alt="Faculty of Dentistry Logo" height="50" width="220" border="0" style="width: 220px; border: 0 !important"></a><br><br><strong>University&nbsp;of&nbsp;Toronto<br>Faculty of Dentistry<br>Office of Advancement</strong><br>124 Edward Street<br>Toronto, Ontario M5G 1G6<br>Tel: 416-864-8200<br>web:
+<a href="##TrackClick##https://www.dentistry.utoronto.ca/alumni" target="_blank" style="color: #008bb0; text-decoration: underline">dentistry.utoronto.ca/alumni</a><br>give:
+<a href="##TrackClick##https://donate.utoronto.ca/give/show/21" target="_blank" style="color: #008bb0; text-decoration: underline">donate.utoronto.ca/dentistry</a></td></tr></tbody></table></div><!--[if mso]>
+</td>
+<td valign="top" width="310">
+<![endif]--><div class="stack-column" style="display: inline-block; width: 100%; min-width: 200px; max-width: 310px; vertical-align: top"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td align="center" style="padding-top: 20px; padding-left: 40px"><table class="stack-column-center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align: left"><tbody><tr><td class="pl-0-on-narrow" style="font-family: arial, sans-serif; font-size: 14px; line-height: 16px; padding-top: 10px; padding-bottom: 10px"><strong style="font-size: 18px; font-family: arial, sans-serif; text-align: left; color: #002a5c">Follow Us & Share Your Story</strong></td></tr><tr><td class="pl-0-on-narrow" style="font-family: arial, sans-serif; font-size: 14px; color: #002a5c; line-height: 14px; padding-top: 10px; padding-bottom: 10px"><strong>@uoftdentistry</strong>
+|
+<strong>#uoftdentistry</strong></td></tr><tr><td class="pl-0-on-narrow" style="font-family: arial, sans-serif; font-size: 15px; line-height: 45px; padding-top: 10px"><a href="##TrackClick##https://www.facebook.com/UofTDentistry" target="_blank" style="border: 0; text-decoration: none"><img src="https://alumni.utoronto.ca/sites/default/files/inline-images/facebook.gif" alt="U&amp;nbsp;of&amp;nbsp;T Facebook" width="38" height="38" style="border: 0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="##TrackClick##https://twitter.com/UofTDentistry" target="_blank" style="border: 0; text-decoration: none"><img src="https://alumni.utoronto.ca/sites/default/files/inline-images/twitter.gif" alt="U&amp;nbsp;of&amp;nbsp;T Twitter" width="38" height="38" style="border: 0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="##TrackClick##https://www.youtube.com/channel/UCtnHbcZUjQa3NnttGcvHGJw" target="_blank" style="border: 0; text-decoration: none"><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/02/youtube.png" alt="U&amp;nbsp;of&amp;nbsp;T Instagram" width="35" height="35" style="border: 0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="##TrackClick##https://www.facebook.com/groups/299575967294555/" target="_blank" style="border: 0; text-decoration: none"><img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/02/fb-groups.png" alt="U&amp;nbsp;of&amp;nbsp;T LinkedIn" width="35" height="35" style="border: 0"></a></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></td></tr>
+
+<!-- Footer 1 Column --><tr><td style="background-color: #ffffff; text-align: center" align="center"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tbody><tr><td style="padding: 20px 25px; font-family: helvetica, arial, sans-serif; font-size: 10px; line-height: 11px; color: #000000; line-height: 18px; text-align: center" align="center">The University&nbsp;of&nbsp;Toronto respects your privacy. We do not rent, trade or sell our mailing lists.<br>Copyright © 2020 University&nbsp;of&nbsp;Toronto. All rights reserved.<br><nowebversion>To opt out of future messages of this kind, please
+<a href="mailto:subscriptions@utoronto.ca?subject=Unsubscribe%20DENT_ALL_ALL_Newsletter_##OptionalParameter3##%20|%20Dentistry Alumni Newsletter" target="_blank" style="color: #008bb0; text-decoration: underline">contact us</a><br>##OptionalParameter3##<br>##TrackImpression##</nowebversion></td></tr></tbody></table></td></tr></table>
+
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]--></div>
+
+
+<!--[if mso | IE]>
+</td>
+</tr>
+</table>
+<![endif]--></center><style data-ignore-inlining>@media (prefers-color-scheme: dark) {
+	#_t::before {
+		content: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?rd&d=##OptionalParameter3##');
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	#_t::before {
+		content: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?rl&d=##OptionalParameter3##');
+	}
+}
+
+@media print {
+	#_t {
+		background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?p&d=##OptionalParameter3##');
+	}
+}
+
+div.OutlookMessageHeader {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+table.moz-email-headers-table {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+blockquote #_t {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+#MailContainerBody #_t {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+</style>
+<div id="_t"></div><img src="https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?d=##OptionalParameter3##" width="1" height="1" border="0" alt=""></body></html>

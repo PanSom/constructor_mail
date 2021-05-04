@@ -1,0 +1,30 @@
+{
+	"name": "constructor_mail",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"server": "./node_modules/.bin/gulp server",
+		"gulp": "./node_modules/.bin/gulp"
+	},
+	"author": "Pan Som",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"@prettier/plugin-pug": "^1.13.5",
+		"browser-sync": "^2.26.14",
+		"gulp": "^4.0.2",
+		"gulp-append-prepend": "^1.0.8",
+		"gulp-plumber": "^1.2.1",
+		"gulp-pug": "^4.0.1",
+		"gulp-watch": "^5.0.1",
+		"prettier": "^2.2.1",
+		"stylelint": "^13.12.0",
+		"stylelint-config-airbnb": "^0.0.0",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-order": "^4.1.0",
+		"stylelint-prettier": "^1.2.0",
+		"stylelint-scss": "^3.19.0"
+	}
+}

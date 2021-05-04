@@ -1,0 +1,33 @@
+@media (prefers-color-scheme: dark) {
+	#_t::before {
+		content: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?rd&d=##OptionalParameter3##');
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	#_t::before {
+		content: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?rl&d=##OptionalParameter3##');
+	}
+}
+
+@media print {
+	#_t {
+		background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?p&d=##OptionalParameter3##');
+	}
+}
+
+div.OutlookMessageHeader {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+table.moz-email-headers-table {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+blockquote #_t {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}
+
+#MailContainerBody #_t {
+	background-image: url('https://lqf7o0ob.emltrk.com/v2/lqf7o0ob?f&d=##OptionalParameter3##');
+}

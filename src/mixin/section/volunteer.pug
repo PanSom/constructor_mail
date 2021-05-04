@@ -1,0 +1,99 @@
+mixin volunteer(json)
+	if !json.button
+		- json.button = "Learn more "
+	| <!--[if mso]>
+	| <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
+	| <tr>
+	| <td valign="top" width="210">
+	| <![endif]-->
+	.stack-column(
+		style='display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 210px; vertical-align: top'
+	)
+		table(
+			role='presentation',
+			cellspacing='0',
+			cellpadding='0',
+			border='0',
+			width='100%'
+		)
+			tbody
+				tr
+					td(
+						style='padding: 20px 20px 0 0'
+					)
+						table(
+							role='presentation',
+							cellspacing='0',
+							cellpadding='0',
+							border='0',
+							width='100%',
+							style='font-size: 14px; text-align: left'
+						)
+							tbody
+								tr
+									td
+										img(
+											src=json.img,
+											width='210',
+											height='152',
+											border='0',
+											alt=json.title,
+											style='width: 100%; max-width: 210px; height: auto; background: #ffffff'
+										)
+	| <!--[if mso]>
+	| </td>
+	| <td valign="top" width="410">
+	| <![endif]-->
+	.stack-column(
+		style='display: inline-block; margin: 0 -1px; width: 100%; min-width: 200px; max-width: 410px; vertical-align: top'
+	)
+		table(
+			role='presentation',
+			cellspacing='0',
+			cellpadding='0',
+			border='0',
+			width='100%'
+		)
+			tbody
+				tr
+					td(
+						style='padding: 20px 0 0 20px'
+					)
+						table(
+							role='presentation',
+							cellspacing='0',
+							cellpadding='0',
+							border='0',
+							width='100%',
+							style='font-size: 14px; text-align: left'
+						)
+							tbody
+								tr
+									td(
+										valign='top',
+										style='padding-top: 0; padding-bottom: 10px; text-align: left; font-family: arial'
+									)
+										a(
+											href=json.href,
+											target='_blank',
+											style='font-weight: bold; font-size: 14px; color: #000000; text-decoration: none; line-height: 18px'
+										)
+											| #{json.title}
+								tr 
+									td(
+										valign='top',
+										style='padding-top: 5px; padding-bottom: 5px; text-align: left; font-size: 14px; font-family: arial; line-height: 18px; color: #000000'
+									)
+										block
+
+								tr
+									td(
+										style='font-family: Arial; padding-top: 10px'
+									)
+										+button(json.href, 'left')
+											| #{json.button}
+	| <!--[if mso]>
+	| </td>
+	| </tr>
+	| </table>
+	| <![endif]-->

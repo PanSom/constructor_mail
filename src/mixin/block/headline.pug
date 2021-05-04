@@ -1,0 +1,26 @@
+mixin headline(title)
+	if !title
+		- var title = "Need title"
+	tr
+		td(
+			style='background-color: #ffffff; padding: 0 30px'
+		)
+			table(
+				role='presentation',
+				cellspacing='0',
+				cellpadding='0',
+				border='0',
+				width='100%'
+			)
+				tbody
+					tr
+						td(
+							valign='middle',
+							align='center',
+							width='100%',
+							style='font-size: 22px; line-height: 26px; border-bottom: 2px solid #25355a; padding-top: 10px; padding-bottom: 10px; text-align: center; color: #25355a; font-family: Arial; width: 100%'
+						)
+							strong(
+								style='text-transform: uppercase'
+							)
+								| #{title}
