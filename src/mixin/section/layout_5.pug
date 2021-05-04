@@ -1,0 +1,119 @@
+mixin layout_5(json_left, json_right)
+	<!-- Layout 5 : BEGIN UPDATE TEMPLATE WITH MSO CODE FOR ROUND IMAGES-->
+	<!-- 2 Even Columns : BEGIN -->
+	<tr>
+		<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+			<!--[if mso]>
+				<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+				<tr>
+				<td valign="top" width="330">
+				<![endif]-->
+			<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tr>
+						<td style="padding: 10px;">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+								<tr>
+									<td>
+										img.center-on-narrow(
+											src=json_left.image,
+											width='310',
+											height='',
+											border='0',
+											alt=json_left.subheader,
+											style='width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555'
+										)
+									</td>
+								</tr>
+								<tr>
+									<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center">
+										h1(
+											style='margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold'
+										) !{json_left.subheader}
+										p(
+											style='margin: 0 0 20px'
+										) !{json_left.text}
+									</td>
+								</tr>
+								<tr>
+									<td style="padding: 0 0 20px;">
+										<!-- Button : BEGIN -->
+										<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+											<tr>
+												<td class="button-td button-td-primary" style="background: #78BE20;">
+													a.button-a.button-a-primary(
+														href="##TrackClick##" + json_left.link,
+														style='background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase'
+													) !{json_left.link_text}
+												</td>
+											</tr>
+										</table>
+										<!-- Button : END -->
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--[if mso]>
+				</td>
+				<td valign="top" width="330">
+				<![endif]-->
+			<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tr>
+						<td style="padding: 10px;">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+								<tr>
+									<td>
+										img.center-on-narrow(
+											src=json_right.image,
+											width='310',
+											height='',
+											border='0',
+											alt=json_right.subheader,
+											style='width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555'
+										)
+									</td>
+								</tr>
+								<tr>
+									<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center">
+										h1(
+											style='margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold'
+										) !{json_right.subheader}
+										p(
+											style='margin: 0 0 20px'
+										) !{json_right.text}
+									</td>
+								</tr>
+								<tr>
+									<td style="padding: 0 0 20px;">
+										<!-- Button : BEGIN -->
+										<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+											<tr>
+												<td class="button-td button-td-primary" style="background: #78BE20;">
+													a.button-a.button-a-primary(
+														href="##TrackClick##" + json_right.link,
+														style='background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase'
+													) !{json_right.link_text}
+												</td>
+											</tr>
+										</table>
+										<!-- Button : END -->
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--[if mso]>
+				</td>
+				</tr>
+				</table>
+				<![endif]-->
+		</td>
+	</tr>
+	<!-- 2 Even Columns : END -->
+	<!-- Layout 5 : END -->
