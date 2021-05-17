@@ -8,7 +8,11 @@ mixin news(json)
 	)
 		tbody
 			tr 
-				td(align="center" valign="top" style="font-size:0; padding: 10px 0 0; background-color: #ffffff;")
+				td(
+					align='center',
+					valign='top',
+					style='font-size: 0; padding: 10px 0 0; background-color: #ffffff'
+				)
 					| <!--[if mso]>
 					| <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="620">
 					| <tr>
@@ -90,7 +94,13 @@ mixin news(json)
 																em 
 																	| #{json.title}
 															else
-																| #{json.title}
+																if (json.title_alt)
+																	span(
+																		style='color: #007fa3'
+																	)
+																		| #{json.title}
+																else
+																	| #{json.title}
 												tr 
 													td(
 														valign='top',
