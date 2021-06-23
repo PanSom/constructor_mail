@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+	<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+	<!-- Tell iOS not to automatically link certain text strings. -->
+	<title>University of Toronto</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+	<!--[if mso]>
+        <style>
+            * {
+                font-family: arial, sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+	<!-- CSS Reset : BEGIN -->
+	<style>
+		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+		/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+		/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+		@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+			u~div .email-container {
+				min-width: 320px !important;
+			}
+		}
+
+		/* iPhone 6, 6S, 7, 8, and X */
+		@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+			u~div .email-container {
+				min-width: 375px !important;
+			}
+		}
+
+		/* iPhone 6+, 7+, and 8+ */
+		@media only screen and (min-device-width: 414px) {
+			u~div .email-container {
+				min-width: 414px !important;
+			}
+		}
+
+		/* What it does: Remove spaces around the email design added by some email clients. */
+
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+		html,
+		body {
+			margin: 0 auto !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Centers email on Android 4.4 */
+		div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+		}
+
+		/* What it does: forces Samsung Android mail clients to use the entire viewport */
+		#MessageViewBody,
+		#MessageWebViewDiv {
+			width: 100% !important;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Fixes webkit padding issue. */
+		table {
+			border-spacing: 0 !important;
+			border-collapse: collapse !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+		a {
+			text-decoration: none;
+		}
+
+		/* What it does: A work-around for email clients meddling in triggered links. */
+		a[x-apple-data-detectors],
+		/* iOS */
+		.unstyle-auto-detected-links a,
+		.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+		.im {
+			color: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+		.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+		}
+
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img+div {
+			display: none !important;
+		}
+	</style>
+
+	<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+	<!-- CSS Reset : END -->
+
+	<!-- Progressive Enhancements : BEGIN -->
+	<style>
+		/* Media Queries */
+		@media screen and (max-width: 480px) {
+			/* What it does: Forces table cells into full-width rows. */
+
+			.stack-column,
+			.stack-column-center {
+				display: block !important;
+				width: 100% !important;
+				max-width: 100% !important;
+				direction: ltr !important;
+			}
+
+			/* And center justify these ones. */
+			.stack-column-center {
+				text-align: center !important;
+			}
+
+			/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+			.center-on-narrow {
+				text-align: center !important;
+				display: block !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				float: none !important;
+			}
+
+			.pl-0-on-narrow {
+				padding-left: 0px !important;
+			}
+
+			.prl-0-on-narrow {
+				padding-left: 0px !important;
+				padding-right: 0px !important;
+			}
+
+			table.center-on-narrow {
+				display: inline-block !important;
+			}
+
+			/* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+			}
+		}
+
+		/* What it does: Hover styles for buttons */
+		.button-td,
+		.button-a {
+			transition: all 100ms ease-in;
+		}
+
+		.button-td-primary:hover,
+		.button-a-primary:hover {
+			background: #555555 !important;
+			border-color: #555555 !important;
+		}
+	</style>
+	<!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+	The email background color (#f3f4f7) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f3f4f7;">
+	<center style="width: 100%; background-color: #f3f4f7;">
+		<!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f3f4f7;">
+    <tr>
+    <td>
+    <![endif]-->
+
+		<!-- Visually Hidden Preheader Text : BEGIN -->
+		<div
+			style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: arial, sans-serif;">
+			Your lifelong benefits begin now
+		</div>
+		<!-- Visually Hidden Preheader Text : END -->
+
+		<!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+		<!-- Preview Text Spacing Hack : BEGIN -->
+		<div
+			style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: arial, sans-serif;">
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		</div>
+		<!-- Preview Text Spacing Hack : END -->
+
+		<!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 680px.
+            2. MSO tags for Desktop Windows Outlook enforce a 680px width.
+            Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.
+        -->
+		<div style="max-width: 680px; margin: 0 auto;" class="email-container">
+			<!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680">
+            <tr>
+            <td>
+            <![endif]-->
+
+			<!-- Email Body : BEGIN -->
+
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+
+				<tr>
+					<td valign="top"
+						style="text-align: center; padding-bottom: 20px; padding-top: 10px; font-family: Arial; background-color: #ffffff; border-bottom: 1px solid #002A5C;">
+						<a href="##HTMLNewsletterURL##"
+							style="text-decoration: none !important; color: #000000; font-size: 12px;"><strong>View this email
+								online</strong></a>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top"
+						style="text-align: center; padding-bottom: 15px; padding-top: 15px; font-family: Arial; background-color: #ffffff; border-bottom: 1px solid #002A5C;">
+						<a href="##HTMLNewsletterURL##"
+							style="text-decoration: none !important; color: #002A5C; font-size: 14px;"><strong>JUNE
+								2021</strong></a>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center; padding:20px 30px 0 30px; background: #ffffff;" width="100%" valign="top">
+						<a href="##TrackClick##https://www.dentistry.utoronto.ca/" target="_blank" style="color: #007fa3;"><img
+								src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/04/Dentistry.jpg"
+								style="border: 0 !important;width: 100%;height: auto;"
+								alt="University of Toronto, Faculty of Dentistry Logo"></a>
+					</td>
+				</tr>
+
+				<!-- Hero Image, Flush : BEGIN -->
+				<tr>
+					<td style="background-color: #ffffff; padding: 20px 0 0;font-size: 0;">
+						<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/06/Mural_with_Words.jpg" width="680"
+							height="auto" alt="Mural in the 124 Edward Street lobby painted by Carmen Cereceda" border="0"
+							style="width: 100%; max-width: 680px; height: auto; background: #dddddd ;margin: 0 auto;"
+							class="fluid g-img">
+					</td>
+				</tr>
+
+				<tr>
+					<td style="background-color: #ffffff; padding: 0; text-align: center;color: #002a5c;">
+						<em>Mural in the 124 Edward Street lobby painted by Carmen Cereceda</em>
+					</td>
+				</tr>
+				<!-- Hero Image, Flush : END -->
+
+				<!-- 1 Column Text : BEGIN -->
+				<tr>
+					<td style="background-color: #ffffff;text-align: center;" align="center">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td
+									style="padding: 20px 25px; padding-top: 10px; color: #002a5c; font-family: arial, sans-serif; font-size: 13px; line-height: 24px;text-align: center; border-bottom: 4px solid #cedde9;"
+									align="center"><br>
+									<strong
+										style="line-height: 40px; color: #002a5c; font-family: arial, sans-serif; font-size: 24px;">Welcome
+										to the Alumni Association</strong><br>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="background-color: #ffffff;text-align: center;" align="center">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td
+									style="padding: 20px 25px; color: #002a5c; font-family: arial, sans-serif; font-size: 18px; line-height: 26px;text-align: left;"
+									align="left">
+									Welcome to a proud and remarkably accomplished international community of over 8,500 U&nbsp;of&nbsp;T
+									Dentistry alumni.
+									<br><br>
+									<strong style="color: #008bb0;">Did you know?</strong>
+									<br><br>
+									Like every graduate before you, you are automatically enrolled in the Faculty of Dentistry Alumni
+									Association.
+									<br><br>
+									As a member of the Faculty of Dentistry Alumni Association (<a
+										href="https://www.dentistry.utoronto.ca/alumni-association"
+										style="color: #008bb0; text-decoration: underline;">FDAA</a>) and the University of Toronto Alumni
+									Association (<a href="https://alumni.utoronto.ca/alumni-networks/u-of-t-alumni-association"
+										style="color: #008bb0; text-decoration: underline;">UTAA</a>), you now have access to exclusive
+									programming and a variety of learning opportunities, discounts and events.<br><br>
+									<strong>Your lifelong benefits begin now.</strong>
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" style="text-align: center; padding-bottom: 5px;" align="center">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow">
+										<tr>
+											<td class="button-td button-td-primary" style="background: #0a3e70;">
+												<a class="button-a button-a-primary" href="https://alumni.utoronto.ca/new-grads"
+													style="background: #0a3e70; border: 1px solid #0a3e70; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 15px 30px; color: #ffffff; display: block; border-radius: 4px;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;VIEW&nbsp;&nbsp;&nbsp;&nbsp;</strong></a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td
+									style="padding: 20px 25px; color: #002a5c; font-family: arial, sans-serif; font-size: 18px; line-height: 26px;text-align: left;"
+									align="left">
+									<strong style="color: #008bb0;">The FDAA Board of Directors</strong>
+									<br><br>
+									We're committed to creating positive and fulfilling experiences for all. Our goal is to bring together
+									our great alumni through a variety of exciting engagement opportunities.
+									<br><br>
+									<strong>Interested in making a difference?</strong>
+									<br><br>
+									The Board of Directors is currently accepting applications for 5 open positions.
+								</td>
+							</tr>
+							<tr>
+								<td valign="top" style="text-align: center; padding-bottom: 5px;" align="center">
+									<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow">
+										<tr>
+											<td class="button-td button-td-primary" style="background: #0a3e70;">
+												<a class="button-a button-a-primary" href="https://www.dentistry.utoronto.ca/alumni-association"
+													style="background: #0a3e70; border: 1px solid #0a3e70; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 15px 15px; color: #ffffff; display: block; border-radius: 4px;"><strong>LEARN
+														MORE</strong></a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td
+									style="padding: 20px 25px; color: #002a5c; font-family: arial, sans-serif; font-size: 18px; line-height: 26px;text-align: left;"
+									align="left">
+									We hope you will think back to your time at the Faculty of Dentistry fondly and know that we are proud
+									of your achievements and the commitment you have made to practice with professionalism, ethics, and
+									empathy.
+									<br><br>
+									As your professional lives in dentistry unfold, remember that your alumni team, classmates and friends
+									are always nearby to support and share this remarkable career path with you.
+									<br><br>
+									<strong style="color: #008bb0;">Stay connected with your friends and colleagues</strong>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- 1 Column Text : END -->
+
+				<!-- 2 Even Columns : BEGIN -->
+				<tr>
+					<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+						<!--[if mso]>
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+                        <tr>
+                        <td valign="top" width="330">
+                        <![endif]-->
+						<div
+							style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+							class="stack-column">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td style="padding: 10px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+											style="font-size: 14px; text-align: left;">
+											<tr>
+												<td>
+													<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/pic-1.jpg" width="310"
+														height="" border="0" alt="alt_text"
+														style="width: 100%; max-width: 310px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"
+														class="center-on-narrow">
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c; padding-top: 10px;"
+													class="stack-column-center">
+													<p style="margin: 0;"><a href="https://www.facebook.com/groups/uoftdentistryalumni"
+															style="color: #008bb0; text-decoration: underline;">Join</a> our Facebook group</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        <td valign="top" width="330">
+                        <![endif]-->
+						<div
+							style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+							class="stack-column">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td style="padding: 10px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+											style="font-size: 14px;text-align: left;">
+											<tr>
+												<td>
+													<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/pic-2.jpg" width="310"
+														height="" border="0" alt="alt_text"
+														style="width: 100%; max-width: 310px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c;"
+														class="center-on-narrow">
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c; padding-top: 10px;"
+													class="stack-column-center">
+													<p style="margin: 0;"><a
+															href="https://secureca.imodules.com/s/731/form-blank/index.aspx?sid=731&gid=1&pgid=11544&cid=19864"
+															style="color: #008bb0; text-decoration: underline;">Update</a> your contact info to
+														receive invitations, the newsletter and the U&nbsp;of&nbsp;T Dentistry magazine</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+					</td>
+				</tr>
+				<!-- 2 Even Columns : END -->
+
+				<!-- 2 Even Columns : BEGIN -->
+				<tr>
+					<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+						<!--[if mso]>
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+                        <tr>
+                        <td valign="top" width="330">
+                        <![endif]-->
+						<div
+							style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+							class="stack-column">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td style="padding: 10px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+											style="font-size: 14px; text-align: left;">
+											<tr>
+												<td>
+													<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/pic-3.jpg" width="310"
+														height="" border="0" alt="alt_text"
+														style="width: 100%; max-width: 310px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c;"
+														class="center-on-narrow">
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c; padding-top: 10px;"
+													class="stack-column-center">
+													<p style="margin: 0;"><a href="mailto:alumni@dentistry.utoronto.ca"
+															style="color: #008bb0; text-decoration: underline;">Email</a> us</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        <td valign="top" width="330">
+                        <![endif]-->
+						<div
+							style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+							class="stack-column">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td style="padding: 10px;">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+											style="font-size: 14px;text-align: left;">
+											<tr>
+												<td>
+													<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/07/pic-4.jpg" width="310"
+														height="" border="0" alt="alt_text"
+														style="width: 100%; max-width: 310px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c;"
+														class="center-on-narrow">
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002a5c; padding-top: 10px;"
+													class="stack-column-center">
+													<p style="margin: 0;"><a href="https://www.dentistry.utoronto.ca/alumni"
+															style="color: #008bb0; text-decoration: underline;">Visit</a> the U&nbsp;of&nbsp;T
+														Dentistry Alumni Page</p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+					</td>
+				</tr>
+				<!-- 2 Even Columns : END -->
+
+				<!--Divider: START-->
+				<tr>
+					<td width="600" height="20" style=" background-color: #ffffff;" class="outer"></td>
+				</tr>
+
+				<tr>
+					<td align="left" valign="top" width="" height="1"
+						style="background-color: rgb(0, 0, 0); border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 1px;">
+						<!--[if gte mso 15]>
+                                &nbsp;
+                            <![endif]-->
+					</td>
+				</tr>
+				<!--Divider: END-->
+
+				<!-- 2 Even Columns : BEGIN -->
+				<tr>
+					<td align="center" valign="top" style="font-size:0; padding: 0px 20px; background-color: #ffffff;">
+						<!--[if mso]>
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="630">
+                        <tr>
+                        <td valign="top" width="315">
+                        <![endif]-->
+						<div style="display:inline-block; width:100%; min-width:200px; max-width:315px; vertical-align:top;"
+							class="center-on-narrow">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td style="padding-top: 20px;font-family: arial; font-size: 13px; color: #666666;"
+										class="center-on-narrow">
+										<a href="##TrackClick##https://www.dentistry.utoronto.ca/" style="color: #008bb0;" target="_blank">
+											<img src="https://alumni.utoronto.ca/sites/default/files/inline-images/dentistry-logo-small.jpg"
+												alt="Faculty of Dentistry Logo" height="50" width="220" border="0"
+												style="width:220px; border: 0 !important;">
+										</a>
+										<br><br>
+										<strong>
+											University&nbsp;of&nbsp;Toronto<br>
+											Faculty of Dentistry<br>
+											Office of Advancement
+										</strong>
+										<br> 124 Edward Street
+										<br> Toronto, Ontario M5G 1G6
+										<br> Tel: 416-864-8200
+										<br> web: <a href="##TrackClick##https://www.dentistry.utoronto.ca/alumni"
+											style="color: #008bb0;">dentistry.utoronto.ca/alumni</a>
+										<br> give: <a href="##TrackClick##https://donate.utoronto.ca/give/show/21"
+											style="color: #008bb0;">donate.utoronto.ca/dentistry</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        <td valign="top" width="315">
+                        <![endif]-->
+
+						<!-- 2 Even Columns : BEGIN -->
+						<div style="display:inline-block; width:100%; min-width:200px; max-width:315px; vertical-align:top;"
+							class="">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tr>
+									<td align="center" style="padding-top: 20px; padding-left: 20px">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+											style="text-align: left;" class="center-on-narrow">
+											<tr>
+												<td
+													style="font-family: arial, sans-serif; font-size: 15px; line-height: 16px; padding-top: 10px;padding-bottom: 10px;"
+													class="pl-0-on-narrow center-on-narrow">
+													<strong
+														style="font-size: 18px;font-family: arial, sans-serif; text-align: left; color:#002a5c;">Follow
+														Us & Share Your Story</strong>
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: arial, sans-serif; font-size: 14px;color:#002a5c; line-height: 14px; padding-top: 10px;padding-bottom: 10px;"
+													class="pl-0-on-narrow center-on-narrow">
+													<strong>@uoftdentistry</strong> | <strong>#uoftdentistry</strong>
+												</td>
+											</tr>
+											<tr>
+												<td
+													style="font-family: arial, sans-serif; font-size: 15px; line-height: 45px; padding-top: 10px;"
+													class="pl-0-on-narrow center-on-narrow">
+													<a href="##TrackClick##https://www.facebook.com/UofTDentistry"
+														style="border: 0; text-decoration: none;">
+														<img src="https://alumni.utoronto.ca/sites/default/files/inline-images/facebook.gif"
+															alt="U&nbsp;of&nbsp;T Facebook" width="38" height="38" style="border: 0;">
+													</a>&nbsp;&nbsp;&nbsp;
+													<a href="##TrackClick##https://twitter.com/UofTDentistry"
+														style="border: 0; text-decoration: none;">
+														<img src="https://alumni.utoronto.ca/sites/default/files/inline-images/twitter.gif"
+															alt="U&nbsp;of&nbsp;T Twitter" width="38" height="38" style="border: 0;">
+													</a>&nbsp;&nbsp;&nbsp;
+													<a href="##TrackClick##https://www.youtube.com/channel/UCtnHbcZUjQa3NnttGcvHGJw"
+														style="border: 0; text-decoration: none;">
+														<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/02/youtube.png"
+															alt="U&nbsp;of&nbsp;T Instagram" width="35" height="35" style="border: 0;">
+													</a>&nbsp;&nbsp;&nbsp;
+													<a href="##TrackClick##https://www.facebook.com/groups/299575967294555/"
+														style="border: 0; text-decoration: none;">
+														<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2020/02/fb-groups.png"
+															alt="U&nbsp;of&nbsp;T LinkedIn" width="35" height="35" style="border: 0;">
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+					</td>
+				</tr>
+				<!-- 2 Even Columns : END -->
+
+				<!-- 1 Column Text : BEGIN -->
+				<tr>
+					<td style="background-color: #ffffff;text-align: center;" align="center">
+						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr>
+								<td
+									style="padding: 20px 25px; font-family: helvetica, arial, sans-serif; font-size: 10px; line-height: 11px; color: #000000;line-height: 18px;text-align: center;"
+									align="center">
+									The University&nbsp;of&nbsp;Toronto respects your privacy.
+									We do not rent, trade or sell our mailing lists.<br>
+									Copyright © 2020 University&nbsp;of&nbsp;Toronto. All rights reserved.<br>
+									<nowebversion>
+										To opt out of future messages of this kind, please <a
+											href="mailto:alumni@dentistry.utoronto.ca?subject=Unsubscribe%20DENT_ALL_ALL_Invitation_##OptionalParameter3##%20|%20Dentistry%20-%20Graduation%20Ceremony"
+											style="color: #008bb0;">contact us</a>.</nowebversion>
+									<br>##OptionalParameter3##<br>
+									##TrackImpression##
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<!-- 1 Column Text : END -->
+
+			</table>
+			<!-- Email Body : END -->
+
+			<!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+		</div>
+
+
+		<!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+	</center>
+	<style data-ignore-inlining>
+		@media print {
+			#_t {
+				background-image: url('https://kvic5sud.emltrk.com/kvic5sud?p&d=##OptionalParameter3##');
+			}
+		}
+
+		div.OutlookMessageHeader {
+			background-image: url('https://kvic5sud.emltrk.com/kvic5sud?f&d=##OptionalParameter3##')
+		}
+
+		table.moz-email-headers-table {
+			background-image: url('https://kvic5sud.emltrk.com/kvic5sud?f&d=##OptionalParameter3##')
+		}
+
+		blockquote #_t {
+			background-image: url('https://kvic5sud.emltrk.com/kvic5sud?f&d=##OptionalParameter3##')
+		}
+
+		#MailContainerBody #_t {
+			background-image: url('https://kvic5sud.emltrk.com/kvic5sud?f&d=##OptionalParameter3##')
+		}
+	</style>
+	<div id="_t"></div>
+	<img src="https://kvic5sud.emltrk.com/kvic5sud?d=##OptionalParameter3##" width="1" height="1" border="0" alt="" />
+</body>
+
+</html>
