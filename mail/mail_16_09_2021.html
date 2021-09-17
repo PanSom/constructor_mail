@@ -1,0 +1,1137 @@
+<!-- block--><!-- template--><!-- section--><!-- pharmacy--><!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+	<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+	<!-- Tell iOS not to automatically link certain text strings. -->
+	<meta name="color-scheme" content="light">
+	<meta name="supported-color-schemes" content="light">
+	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+	<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+	<!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+	<!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+	<!--[if !mso]><!-->
+	<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+	<!--<![endif]-->
+
+	<!-- Web Font / @font-face : END -->
+
+	<!-- CSS Reset : BEGIN -->
+	<style>
+		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+
+		/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+		/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+		@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+			u~div .email-container {
+				min-width: 320px !important;
+			}
+		}
+
+		/* iPhone 6, 6S, 7, 8, and X */
+		@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+			u~div .email-container {
+				min-width: 375px !important;
+			}
+		}
+
+		/* iPhone 6+, 7+, and 8+ */
+		@media only screen and (min-device-width: 414px) {
+			u~div .email-container {
+				min-width: 414px !important;
+			}
+		}
+
+		/* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+		:root {
+			color-scheme: light;
+			supported-color-schemes: light;
+		}
+
+		/* What it does: Remove spaces around the email design added by some email clients. */
+
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+		html,
+		body {
+			margin: 0 auto !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Centers email on Android 4.4 */
+		div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+		}
+
+		/* What it does: forces Samsung Android mail clients to use the entire viewport */
+		#MessageViewBody,
+		#MessageWebViewDiv {
+			width: 100% !important;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Fixes webkit padding issue. */
+		table {
+			border-spacing: 0 !important;
+			border-collapse: collapse !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+		a {
+			text-decoration: none;
+		}
+
+		/* What it does: A work-around for email clients meddling in triggered links. */
+		a[x-apple-data-detectors],
+		/* iOS */
+		.unstyle-auto-detected-links a,
+		.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+		.im {
+			color: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+		.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+		}
+
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img+div {
+			display: none !important;
+		}
+	</style>
+	<!-- CSS Reset : END -->
+
+	<!-- Progressive Enhancements : BEGIN -->
+	<style>
+		/* Media Queries */
+		@media screen and (max-width: 480px) {
+			/* What it does: Forces table cells into full-width rows. */
+
+			.stack-column,
+			.stack-column-center {
+				display: block !important;
+				width: 100% !important;
+				max-width: 100% !important;
+				direction: ltr !important;
+			}
+
+			/* And center justify these ones. */
+			.stack-column-center {
+				text-align: center !important;
+			}
+
+			/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+			.center-on-narrow {
+				text-align: center !important;
+				display: block !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				float: none !important;
+			}
+
+			table.center-on-narrow {
+				display: inline-block !important;
+			}
+
+			/* What it does: Adjust typography on small screens to improve readability */
+			.email-container p {
+				font-size: 17px !important;
+			}
+		}
+
+		/* What it does: Hover styles for buttons */
+		.button-td,
+		.button-a {
+			transition: all 100ms ease-in;
+			border: 0;
+		}
+
+		.button-td-primary:hover,
+		.button-a-primary:hover {
+			background: #5bb432 !important;
+			border-color: #5bb432 !important;
+		}
+	</style>
+	<!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+  The email background color (#eeeeee) is defined in three places:
+  1. body tag: for most email clients
+  2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+  3. mso conditional: For Windows 10 Mail
+-->
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #eeeeee;">
+	<center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #eeeeee;">
+		<!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eeeeee;">
+    <tr>
+    <td>
+    <![endif]-->
+
+		<!-- Visually Hidden Preheader Text : BEGIN -->
+		<div style="max-height:0; overflow:hidden; mso-hide:all;" aria-hidden="true">
+			Rxcellence August 2021
+		</div>
+		<!-- Visually Hidden Preheader Text : END -->
+
+		<!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+		<!-- Preview Text Spacing Hack : BEGIN -->
+		<div
+			style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+			&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+		</div>
+		<!-- Preview Text Spacing Hack : END -->
+
+		<!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 680px.
+            2. MSO tags for Desktop Windows Outlook enforce a 680px width.
+            Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.
+        -->
+		<div style="max-width: 680px; margin: 0 auto;" class="email-container">
+			<!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680">
+            <tr>
+            <td>
+            <![endif]-->
+
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+				<tr>
+					<td style="padding: 10px 0; text-align: center; background: #ffffff; font-family: sans-serif;">
+						<a href="##HTMLNewsletterURL##"
+							style="text-decoration: none !important; color: #000000; font-size: 12px;"><strong>View this email
+								online</strong></a>
+					</td>
+				</tr>
+			</table>
+
+			<!-- Email Body : BEGIN -->
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+				<!-- Email Header : BEGIN -->
+				<tr>
+					<td style="padding: 20px 0; text-align: center; background-color: #002554;">
+						<a href="##TrackClick##https://pharmacy.utoronto.ca/">
+							<img src="https://boundless.utoronto.ca/wp-content/uploads/logo.png" width="236" height="61"
+								alt="University of Toronto" border="0"
+								style="height: auto; background: #002554; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+						</a>
+					</td>
+				</tr>
+				<!-- Email Header : END -->
+
+				<!-- Hero Image, Flush : BEGIN -->
+				<tr>
+					<td style="background-color: #ffffff;">
+						<img src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/05/header_graphic.jpg" width="680"
+							height="" alt="Rxcellence Fall 2020 Banner" border="0"
+							style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;"
+							class="g-img">
+					</td>
+				</tr>
+				<!-- Hero Image, Flush : END -->
+
+				<!-- Clear Spacer : BEGIN -->
+				<!-- <tr>
+                    <td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px; background: #ffffff;">
+                        &nbsp;
+                    </td>
+                </tr> -->
+				<!-- Clear Spacer : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Donor Impact</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 6 : BEGIN -->
+<!-- Hero Image, Flush : BEGIN --><tr><td style="background-color: #ffffff"><img class="g-img" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/class_7T1.jpg" width="680" height="" alt="Class of 7T1 celebrates a virtual 50th reunion and establishes named award at the Leslie Dan Faculty of Pharmacy" border="0" style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block"></td></tr><!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN --><tr><td style="background-color: #ffffff"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="padding: 20px 20px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Class of 7T1 celebrates a virtual 50th reunion and establishes named award at the Leslie Dan Faculty of Pharmacy</h1><p style="margin: 0">n a first for the Office of Advancement and Alumni Relations, the Class of 7T1 reunited via Zoom in celebration of their Golden T, the 50th anniversary of their graduation from the Leslie Dan Faculty of Pharmacy. This unique milestone also celebrated the fundraising efforts of these distinguished alumni in exceeding their goal to establish a named award for students in financial need.</p></td></tr><tr><td style="padding: 0 20px 20px"><!-- Button : BEGIN --><table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td class="button-td button-td-primary" style="background: #78be20"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/class-7t1-celebrates-virtual-50th-reunion-and-establishes-named-award-leslie-dan-faculty-pharmacy" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td></tr></table><!-- Button : END --></td></tr></table></td></tr><!-- 1 Column Text + Button : END -->
+<!-- Layout 6 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Research Impact</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 1 : BEGIN -->
+<!-- Thumbnail Left, Text Right : BEGIN -->
+<tr>
+<!-- dir=ltr is where the magic happens. This can be changed to dir=rtl to swap the alignment on wide while maintaining stack order on narrow. -->
+<td dir="ltr" height="100%" valign="top" width="100%" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660" style="width: 660px;">
+<tr>
+<td valign="top" width="220" style="width: 220px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 220px; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 10px 10px 10px;"><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/orleans_lindsay.jpg" width="200" height="" border="0" alt="Pharmacist brings global view to community practice and volunteering" style="width: 100%; max-width: 200px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555"></td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="440" style="width: 440px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 440px; min-width:280px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding: 10px 10px 0; text-align: left;" class="center-on-narrow"><h2 style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Pharmacist brings global view to community practice and volunteering</h2><p style="margin: 0 0 20px 0">Eustace Orleans-Lindsay is a manager at the Loblaw pharmacy in the Real Canadian Superstore in Simcoe, where he also volunteers as a community leader and health advocate for seasonal agricultural workers.</p><!-- Button : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/pharmacist-brings-global-view-community-practice-and-volunteering" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- Thumbnail Left, Text Right : END -->
+<!-- Layout 1 : END --><!-- Layout 6 : BEGIN -->
+<!-- Hero Image, Flush : BEGIN --><tr><td style="background-color: #ffffff"><img class="g-img" src="https://via.placeholder.com/1280x556.png?text=medicine_by_design.jpg" width="680" height="" alt="Start-up built by U of T alumnus develops Nespresso machine for protein production" border="0" style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block"></td></tr><!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN --><tr><td style="background-color: #ffffff"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="padding: 20px 20px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Start-up built by U of T alumnus develops Nespresso machine for protein production</h1><p style="margin: 0">Manufactured proteins are used as therapeutics, industrial catalysts and biomedical research tools – just to name a few applications, but making them is a time-consuming and complex process. Now, a new venture called Liberum formed within the University of Toronto’s Medicine by Design community, including Aidan Tinafar, graduate student from the Leslie Dan Faculty of Pharmacy, and co-founder and CEO of Liberum, wants to make manufacturing proteins nearly as simple as brewing a cup of coffee.</p></td></tr><tr><td style="padding: 0 20px 20px"><!-- Button : BEGIN --><table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td class="button-td button-td-primary" style="background: #78be20"><a class="button-a button-a-primary" href="##TrackClick##https://alumni.utoronto.ca/news-and-stories/news-and-articles/startup-built-u-t-alumnus-aidan-tinafar-develops-nespresso " style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td></tr></table><!-- Button : END --></td></tr></table></td></tr><!-- 1 Column Text + Button : END -->
+<!-- Layout 6 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Alumni News</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 1 : BEGIN -->
+<!-- Thumbnail Left, Text Right : BEGIN -->
+<tr>
+<!-- dir=ltr is where the magic happens. This can be changed to dir=rtl to swap the alignment on wide while maintaining stack order on narrow. -->
+<td dir="ltr" height="100%" valign="top" width="100%" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660" style="width: 660px;">
+<tr>
+<td valign="top" width="220" style="width: 220px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 220px; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 10px 10px 10px;"><img class="center-on-narrow" src="https://via.placeholder.com/556x556.png?text=NEED+IMG" width="200" height="" border="0" alt="Lorem ipsum dolor sit amet." style="width: 100%; max-width: 200px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555"></td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="440" style="width: 440px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 440px; min-width:280px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding: 10px 10px 0; text-align: left;" class="center-on-narrow"><h2 style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Lorem ipsum dolor sit amet.</h2><p style="margin: 0 0 20px 0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non ex voluptate recusandae. Impedit perferendis magni quasi aliquid porro a, velit dignissimos qui voluptates soluta provident maiores officia illum minima, saepe, culpa quis! Repellat corrupti, veritatis odio totam natus iure error officiis perspiciatis dignissimos pariatur tempora accusantium laudantium repellendus praesentium saepe!</p><!-- Button : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##NEED_LINK" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- Thumbnail Left, Text Right : END -->
+<!-- Layout 1 : END --><!-- Layout 2 : BEGIN -->
+<!-- Thumbnail Right, Text Left : BEGIN -->
+<tr>
+<!-- dir=rtl is where the magic happens. This can be changed to dir=ltr to swap the alignment on wide while maintaining stack order on narrow. -->
+<td dir="rtl" height="100%" valign="top" width="100%" style="font-size:0; padding: 10px; text-align: left; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660" style="width: 660px;">
+<tr>
+<td valign="top" width="220" style="width: 220px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 220px; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 10px 10px 10px;"><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/mentor_call.jpg" width="200" height="" border="0" alt="Volunteer Opportunity:&lt;br&gt;Become an Alumni Mentor!" style="width: 100%; max-width: 200px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555"></td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="440" style="width: 440px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 440px; min-width:280px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding: 10px; text-align: left;" class="center-on-narrow"><h2 style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Volunteer Opportunity:<br>Become an Alumni Mentor!</h2><p style="margin: 0 0 20px 0">Reconnect with the Office of Advancement and Alumni Relations at the Leslie Dan Faculty of Pharmacy by volunteering as a mentor! Mentoring at the Leslie Dan Faculty of Pharmacy will provide alumni the chance to make an impact on the lives of undergraduate students by sharing their experiences and knowledge all while having the opportunity to improve their leadership skills and build their professional network. Make a difference in the professional lives of PharmD students - apply today!</p><!-- Button : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="" style="float:left;">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##mailto:alumni.pharmacy@utoronto.ca" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Apply today</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- Thumbnail Right, Text Left : END -->
+<!-- Layout 2 : BEGIN --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Alumni on Social</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 3 : BEGIN -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #008BB0;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;"><p style="margin: 0">As part of a network of over 10,400 alumni living and working all over the world, you are part of a community that is moving science and health! We invite you to connect with our pharmacy community on Facebook and LinkedIn.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #002A5C;"><a class="button-a button-a-primary" href="##TrackClick##NEED_LINK" style="background: #002a5c; border: 1px solid #002a5c; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Follow today</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Layout 3 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Our Alumni</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 6 : BEGIN -->
+<!-- Hero Image, Flush : BEGIN --><tr><td style="background-color: #ffffff"><img class="g-img" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/class_notes.jpg" width="680" height="" alt="Class Notes" border="0" style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block"></td></tr><!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN --><tr><td style="background-color: #ffffff"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="padding: 20px 20px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Class Notes</h1><p style="margin: 0">Following the Leslie Dan Faculty of Pharmacy’s GoldenT Reunion in celebration of classes 50th and 60th anniversaries the office of advancement caught up with so many alumni who wanted to share what they have been up to over the years!</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Hugh Gale MacKinnon, 6T1</h3><p> Gale is happily retired after 42 years at MacKinnon Guardian Drugs, Niagara Falls. He enjoyed many years on OPA Council, and was President in 1983. Gale has enjoyed sailing his sloop on Lake Ontario and on larger vessels from Manitoulin Island, Caribbean, and Mediterranean Seas.</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Judith (Judy) Y. Mitchell, 6T1</h3><p> In 1963, Judy moved to British Columbia and began an off-again on-again career there by moving back and forth to Ontario a couple of times. Judy managed 3 clinic pharmacies and was staff pharmacist at several more. Her last job before retiring was in Belleville, Ontario.</p><p>Judy’s next move was to the local golf course where she happily played for many years, notably with a hole in one in 2010!</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Linda and Mac Sparrow, 7T0</h3><p> Linda and Mac retired from pharmacy practice in January 2012 when Dell Pharmacy, the company for which they both worked, was sold to Rexall. Since then, they have pursued their love of travel by visiting places such as Antarctica, Africa, Australia, New Zealand, East Asia, and India. They are looking forward to their trips to Croatia and Egypt in 2022.</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Anne Milochik, 7T1</h3><p> After graduating from pharmacy in 1971, Anne worked in hospital pharmacy in Barrie and Toronto. She completed a Masters in Pharmacology from University of Alberta in 1978. Anne volunteers at the Faculty as an interviewer for MMIs and a mentor to students interested in careers in the pharmaceutical industry, as well as the Mississauga Food Bank, Pathways Community Programs, and Mississauga Symphony Orchestra (currently Board President).</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Constance (Connie) Sellors, 7T1</h3><p> Connie was born and raised in Forest, Ontario. After 3 years at University of Western Ontario in Honours Physiology, she transferred into second year Pharmacy at U of T in 1968. Connie enjoyed her over 40 years in community and hospital pharmacy. She holds a CPhA Centennial Pharmacist Award for her contributions to the profession over the last 100 years!</p><h3 style="color: #002a5c; font-weight: bold; margin-bottom: 5px">Celso A. Teixeira, 7T1</h3><p> Celso completed his hospital residency in London, Ontario, winning the 1974 Sandoz Award for Best Residency Project in Canada. He was among the first pharmacists to open University Hospital (1972) in London - established first hospital-wide IV admixture service in Canada. Celso completed his Masters in Health Services Administration at the University of Alberta in 1975.</p></td></tr></table></td></tr><!-- 1 Column Text + Button : END -->
+<!-- Layout 6 : END --><!-- Layout 1 : BEGIN -->
+<!-- Thumbnail Left, Text Right : BEGIN -->
+<tr>
+<!-- dir=ltr is where the magic happens. This can be changed to dir=rtl to swap the alignment on wide while maintaining stack order on narrow. -->
+<td dir="ltr" height="100%" valign="top" width="100%" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660" style="width: 660px;">
+<tr>
+<td valign="top" width="220" style="width: 220px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 220px; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 10px 10px 10px;"><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/christopher_siu.jpg" width="200" height="" border="0" alt="U of T pharmacy alum takes home Masterchef Canada top prize" style="width: 100%; max-width: 200px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555"></td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="440" style="width: 440px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 440px; min-width:280px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding: 10px 10px 0; text-align: left;" class="center-on-narrow"><h2 style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">U of T pharmacy alum takes home Masterchef Canada top prize</h2><p style="margin: 0 0 20px 0">Christopher Siu combines East Asian heritage, Canadian upbringing and scientific education to create original dishes.</p><!-- Button : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/u-t-pharmacy-alum-takes-home-masterchef-canada-top-prize" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- Thumbnail Left, Text Right : END -->
+<!-- Layout 1 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Our Students</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 5 : BEGIN UPDATE TEMPLATE WITH MSO CODE FOR ROUND IMAGES-->
+<!-- 2 Even Columns : BEGIN -->
+<tr>
+<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+<tr>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/gilmore.jpg" width="310" height="" border="0" alt="Grads to Watch:&lt;br&gt;Julian Gilmore" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Grads to Watch:<br>Julian Gilmore</h1><p style="margin: 0 0 20px">Julian Gilmore credits Leslie Dan Faculty of Pharmacy with providing opportunities to explore clinical career paths.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/new-pharm-sci-grad-aims-build-bridges-between-research-and-clinical-work" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/toye_ojo.jpg" width="310" height="" border="0" alt="Grads to Watch:&lt;br&gt;Andrew Toye Ojo" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Grads to Watch:<br>Andrew Toye Ojo</h1><p style="margin: 0 0 20px">Andrew Toye Ojo, a recent PhD graduate from U of T’s Leslie Dan Faculty of Pharmacy, is impacting patient care with his advanced knowledge of pharmaceutical sciences and a career in health care consulting.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/grads-watch-andrew-toye-ojo-uses-phd-start-career-healthcare-consulting" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- 2 Even Columns : END -->
+<!-- Layout 5 : END --><!-- Layout 5 : BEGIN UPDATE TEMPLATE WITH MSO CODE FOR ROUND IMAGES-->
+<!-- 2 Even Columns : BEGIN -->
+<tr>
+<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+<tr>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/rahmatian.jpg" width="310" height="" border="0" alt="Grads to Watch:&lt;br&gt;Donna Rahmatian" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Grads to Watch:<br>Donna Rahmatian</h1><p style="margin: 0 0 20px">2021 PharmD for Pharmacists grad Donna Rahmatian says the program helped her build important research skills she plans to use in future clinical practice.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/grads-watch-donna-rahmatian-gains-research-experience-and-enhanced-clinical-skills" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/colonna.jpg" width="310" height="" border="0" alt="Grads to Watch:&lt;br&gt;Tierra-Marie Colonna" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Grads to Watch:<br>Tierra-Marie Colonna</h1><p style="margin: 0 0 20px">Following graduation, PharmD graduate Tiera-Marie Colonna plans to continue in a career in industry, while still practising part-time in community pharmacy to maintain her direct connection to patient care.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/grads-watch-tiera-marie-colonna-pursue-career-pharmaceutical-industry" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- 2 Even Columns : END -->
+<!-- Layout 5 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Faculty Update</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 6 : BEGIN -->
+<!-- Hero Image, Flush : BEGIN --><tr><td style="background-color: #ffffff"><img class="g-img" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/tadrous_li.jpg" width="680" height="" alt="New tenure-stream professors bring high-impact research and teaching expertise to the Leslie Dan Faculty of Pharmacy" border="0" style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block"></td></tr><!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN --><tr><td style="background-color: #ffffff"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="padding: 20px 20px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">New tenure-stream professors bring high-impact research and teaching expertise to the Leslie Dan Faculty of Pharmacy</h1><p style="margin: 0">The Leslie Dan Faculty of Pharmacy welcomes Mina Tadrous and Bowen Li as tenure-stream assistant professors.</p></td></tr><tr><td style="padding: 0 20px 20px"><!-- Button : BEGIN --><table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td class="button-td button-td-primary" style="background: #78be20"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/new-tenure-stream-professors-bring-high-impact-research-and-teaching-expertise-leslie-dan-faculty-pharmacy" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td></tr></table><!-- Button : END --></td></tr></table></td></tr><!-- 1 Column Text + Button : END -->
+<!-- Layout 6 : END --><!-- Layout 1 : BEGIN -->
+<!-- Thumbnail Left, Text Right : BEGIN -->
+<tr>
+<!-- dir=ltr is where the magic happens. This can be changed to dir=rtl to swap the alignment on wide while maintaining stack order on narrow. -->
+<td dir="ltr" height="100%" valign="top" width="100%" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660" style="width: 660px;">
+<tr>
+<td valign="top" width="220" style="width: 220px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 220px; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="padding: 0 10px 10px 10px;"><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/stephane_angers.jpg" width="200" height="" border="0" alt="New Donnelly Centre director on advancing bimolecular sciences in Toronto" style="width: 100%; max-width: 200px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555"></td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="440" style="width: 440px;">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; max-width: 440px; min-width:280px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td dir="ltr" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding: 10px 10px 0; text-align: left;" class="center-on-narrow"><h2 style="margin: 0 0 20px 0; font-family: sans-serif; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">New Donnelly Centre director on advancing bimolecular sciences in Toronto</h2><p style="margin: 0 0 20px 0">Professor Stephane Angers, the new director of the Donnelly Centre for Cellular and Biomolecular Research, spoke about his vision for the next five years. Professor Angers’s five-year term begins September 1, 2021, and on behalf of the Office of Advancement and Alumni Relations, we thank Professor Angers for his extraordinary research and contributions to the Leslie Dan Faculty of Pharmacy.</p><!-- Button : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/news-announcements/new-donnelly-centre-director-advancing-biomolecular-sciences-toronto" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Read more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- Thumbnail Left, Text Right : END -->
+<!-- Layout 1 : END --><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Upcoming Events</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 6 : BEGIN -->
+<!-- Hero Image, Flush : BEGIN --><tr><td style="background-color: #ffffff"><img class="g-img" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/09/anes_sept29.jpg" width="680" height="" alt="Alumni Networking and Education Series: COPD/Asthma" border="0" style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block"></td></tr><!-- Hero Image, Flush : END -->
+<!-- 1 Column Text + Button : BEGIN --><tr><td style="background-color: #ffffff"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td style="padding: 20px 20px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Alumni Networking and Education Series: COPD/Asthma</h1><p style="margin: 0">The Alumni Networking and Education Series is back! Join us virtually on Wednesday, September 29 from 6:30 p.m. to 7:30 p.m. for a presentation by John Papastergiou (Leslie Dan Faculty of Pharmacy) where he discusses.</p></td></tr><tr><td style="padding: 0 20px 20px"><!-- Button : BEGIN --><table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td class="button-td button-td-primary" style="background: #78be20"><a class="button-a button-a-primary" href="##TrackClick##NEED_LINK" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Register today</a></td></tr></table><!-- Button : END --></td></tr></table></td></tr><!-- 1 Column Text + Button : END -->
+<!-- Layout 6 : END --><!-- Layout 3 : BEGIN -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #008BB0;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;"><p style="margin: 0">Join your classmates celebrating your 35th anniversary reunion on Manitoulin Island. The reunion will be held on Oct 2nd, 2021 weekend at Woodside Beach Cottages in Providence Bay. If you would like to attend you can obtain further information by contacting Mike Bondi.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #002A5C;"><a class="button-a button-a-primary" href="##TrackClick##mailto:woodsidebeach@gmail.com " style="background: #002a5c; border: 1px solid #002a5c; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Contact Mike Bondi</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Layout 3 : END --><!--/--><!--/--><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Job Board</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 3 : BEGIN -->
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+<td style="background-color: #008BB0;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;"><p style="margin: 0">Check our job board for new employment opportunities. If you would like to post a job for our alumni please contact us at <a style='text-decoration: underline; color: #ffffff' href='mailto:alumni.pharmacy@utoronto.ca'>alumni.pharmacy@utoronto.ca</a></p></td>
+</tr>
+<tr>
+<td style="padding: 0 20px 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #002A5C;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/about-leslie-dan-faculty-pharmacy/job-opportunities" style="background: #002a5c; border: 1px solid #002a5c; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Learn more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+<!-- Layout 3 : END --><!-- Section Header - Alumni Events : BEGIN --><tr>
+<td style="background-color: #ffffff;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 20px 20px 5px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #002A5C;">
+<h1 style="margin: 0; font-size: 24px; line-height: 30px; color: #002A5C; text-transform: uppercase; font-weight: bold;">Educational Opportunities</strong>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="background-color: #ffffff; padding: 0 20px 10px;">
+<img src="https://boundless.utoronto.ca/wp-content/uploads/heading-bd.png" width="640" height="" alt="" border="0" style="width: 100%; max-width: 640px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+</td>
+</tr><!-- Section Header - Alumni Events : END --><!--/--><!-- Layout 5 : BEGIN UPDATE TEMPLATE WITH MSO CODE FOR ROUND IMAGES-->
+<!-- 2 Even Columns : BEGIN -->
+<tr>
+<td align="center" valign="top" style="font-size:0; padding: 10px; background-color: #ffffff;">
+<!--[if mso]>
+<table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+<tr>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px; text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/05/cpe_event.png" width="310" height="" border="0" alt="CPE Speaker Series" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">CPE Speaker Series</h1><p style="margin: 0 0 20px">The Centre for Practice Excellence hosts a monthly Speaker Series on critical issues impacting the future of health care and pharmacy. The CPE Speaker Series takes place on the first Thursday of each month and usually consist of a 20-30 minute presentation followed by 30 minutes of open discussion and Q&A.<br><br>For more information or to be notified of upcoming speakers, please contact the CPE Speaker Series at <a href='mailto:cpe.pharmacy@utoronto.ca '>cpe.pharmacy@utoronto.ca </a></p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://www.pharmacy.utoronto.ca/research/centres-initiatives/centre-practice-excellence/cpe-speaker-series" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Learn more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+<td valign="top" width="330">
+<![endif]-->
+<div style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;" class="stack-column">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td style="padding: 10px;">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+<tr>
+<td><img class="center-on-narrow" src="https://adcomms.utoronto.ca/email-templates/dentistry/2021/05/continuing_studies.png" width="310" height="" border="0" alt="Continuous Professional Development" style="width: 100%; max-width: 310px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555"></td>
+</tr>
+<tr>
+<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #000000; padding-top: 10px;" class="stack-column-center"><h1 style="margin: 0 0 20px; font-size: 24px; line-height: 30px; color: #002a5c; font-weight: bold">Continuous Professional Development</h1><p style="margin: 0 0 20px">The Continuous Professional Development programming equips pharmacists, industry professionals, researchers, scientists, and allied professionals to better respond to the shifting needs of the profession.<br><br>Explore course offerings available through U&nbsp;of&nbsp;T’s School of Continuing Studies.</p></td>
+</tr>
+<tr>
+<td style="padding: 0 0 20px;">
+<!-- Button : BEGIN -->
+<table align="left" role="presentation" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="button-td button-td-primary" style="background: #78BE20;"><a class="button-a button-a-primary" href="##TrackClick##https://learn.utoronto.ca/programs-courses/health-and-social-sciences/pharmacy/continuous-professional-development" style="background: #78be20; border: 1px solid #78be20; font-weight: bold; font-family: sans-serif; font-size: 16px; line-height: 16px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; text-transform: uppercase">Learn more</a></td>
+</tr>
+</table>
+<!-- Button : END -->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+</tr>
+<!-- 2 Even Columns : END -->
+<!-- Layout 5 : END --><!-- Clear Spacer : BEGIN -->
+<tr>
+	<td aria-hidden="true" height="20" style="font-size: 0px; line-height: 0px; background: #ffffff;">
+		&nbsp;
+	</td>
+</tr>
+<!-- Clear Spacer : END -->
+
+</table>
+<!-- Email Body : END -->
+
+<!-- Email Footer : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 680px;">
+	<!-- Hero Image, Flush : BEGIN -->
+	<tr>
+		<td style="background-color: #ffffff;">
+			<img src="https://boundless.utoronto.ca/wp-content/uploads/footer-img.png" width="680" height="" alt="Alumni news"
+				border="0"
+				style="width: 100%; max-width: 680px; height: auto; background: #ffffff; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;"
+				class="g-img">
+		</td>
+	</tr>
+	<!-- Hero Image, Flush : END -->
+	<tr>
+		<td align="center" valign="top" style="font-size:0; padding: 10px 10px 30px; background-color: #002A5C;">
+			<!--[if mso]>
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0" width="660">
+                        <tr>
+                        <td valign="top" width="330">
+                        <![endif]-->
+			<div
+				style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+				class="stack-column">
+				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tr>
+						<td style="padding: 10px;">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+								style="font-size: 14px; text-align: left;">
+								<tr>
+									<td class="stack-column-center">
+										<a href="##TrackClick##https://pharmacy.utoronto.ca/">
+											<img src="https://boundless.utoronto.ca/wp-content/uploads/logo.png" width="236" height="61"
+												alt="University of Toronto" border="0"
+												style="height: auto; background: #002A5C; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #ffffff;">
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td
+										style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding-top: 10px;"
+										class="stack-column-center">
+										<p style="margin: 0;">
+											<strong>Leslie Dan Faculty of Pharmacy</strong>
+											<br>
+											144 College St
+											<br>
+											Toronto, ON, CA &#9679; M5S 3M2
+											<br>
+											<a href="##TrackClick##https://pharmacy.utoronto.ca/"
+												style="color: #78BE20; text-decoration: none;"><strong
+													style="color: #78BE20; text-decoration: none;">pharmacy.utoronto.ca</strong></a>
+											<br>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--[if mso]>
+                        </td>
+                        <td valign="top" width="330">
+                        <![endif]-->
+			<div
+				style="display:inline-block; margin: 0 -1px; width:100%; min-width:200px; max-width:330px; vertical-align:top;"
+				class="stack-column">
+				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tr>
+						<td style="padding: 10px;">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+								style="font-size: 14px;text-align: left;">
+								<tr>
+									<td style="padding-top: 10px; padding-bottom: 7px;" class="stack-column-center">
+										<a href="##TrackClick##http://twitter.com/uoftpharmacy"
+											style="text-decoration: none; vertical-align: middle;">
+											<img src="https://boundless.utoronto.ca/wp-content/uploads/icon-twitter.png" border="0"
+												style="border: none;" width="44" height="44">
+										</a>
+										<a href="##TrackClick##http://facebook.com/uoftpharmacy"
+											style="text-decoration: none; vertical-align: middle;">
+											<img src="https://boundless.utoronto.ca/wp-content/uploads/icon-facebook.png" border="0"
+												style="border: none;" width="44" height="44">
+										</a>
+										<a href="##TrackClick##http://instagram.com/uoftpharmacy"
+											style="text-decoration: none; vertical-align: middle;">
+											<img src="https://boundless.utoronto.ca/wp-content/uploads/icon-instagram.png" border="0"
+												style="border: none;" width="44" height="44">
+										</a>
+										<a href="##TrackClick##https://ca.linkedin.com/school/leslie-dan-faculty-of-pharmacy-university-of-toronto/"
+											style="text-decoration: none; vertical-align: middle;">
+											<img src="https://boundless.utoronto.ca/wp-content/uploads/icon-linkedin.png" border="0"
+												style="border: none;" width="44" height="44">
+										</a>
+									<td style="width: 100px" width="100">
+										<a href="##TrackClick##https://donate.utoronto.ca/give/show/6?utm_source=PHARM&utm_medium=Newsletter&utm_campaign=Feb%202021%20-%20RXcellence&sid=DIS-##OptionalParameter3##|SRC-PHM21AP2EPHARMALUMNI|FN-##OptionalParameter6##"
+											style="color: #ffffff; text-decoration: none !important; font-weight: bold; font-family: sans-serif; font-size: 18px; line-height: 18px; vertical-align: middle;"><strong
+												style="color: #ffffff;">DONATE</strong></a>
+									</td>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff; padding-top: 10px;"
+							class="stack-column-center">
+							<p style="margin: 0;">
+								<strong>Connect with our alumni office</strong>
+								<br>
+								<a href="mailto:alumni.pharmacy@utoronto.ca" style="color: #78BE20; text-decoration: none;"><strong
+										style="color: #78BE20; text-decoration: none;">alumni.pharmacy@utoronto.ca</strong></a>
+							</p>
+						</td>
+					</tr>
+				</table>
+		</td>
+	</tr>
+</table>
+</div>
+<!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+</td>
+</tr>
+<tr>
+	<td align="center" valign="top" style="font-size:0; padding: 0 20px 30px; background-color: #002A5C;">
+		<span style="color: #ffffff; font-size: 14px; font-family: Arial; font-style: italic;">
+			Update your preferences or <a
+				href="mailto:subscriptions@utoronto.ca?subject=UNSUBSCRIBE%2020-21_PHARM_LDFP_ALL_NEWSLETTERS_INITIAL_##OptionalParameter3##%20Feb%202021%20-%20RXcellence"
+				style="text-decoration: none;color: white;">unsubscribe</a> from this list
+		</span>
+	</td>
+</tr>
+</table>
+<!-- Email Footer : END -->
+
+<!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+</div>
+
+<!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+</center>
+##TrackImpression##
+</body>
+
+</html>
