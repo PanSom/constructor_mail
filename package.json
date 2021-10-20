@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"server": "./node_modules/.bin/gulp server",
+		"watch": "./node_modules/.bin/gulp watch",
 		"gulp": "./node_modules/.bin/gulp"
 	},
 	"author": "Pan Som",

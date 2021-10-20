@@ -1,47 +1,47 @@
 mixin button(href, float)
 	<!-- Button -->
 	table.center-on-narrow(
-		role='presentation',
-		cellspacing='0',
-		cellpadding='0',
-		border='0',
-		style=float ? "float: " + float + "; padding: 10px 0" : "margin: auto; padding: 10px 0"
+		role="presentation",
+		cellspacing="0",
+		cellpadding="0",
+		border="0",
+		style=float ? 'float: ' + float + '; padding: 10px 0' : 'margin: auto; padding: 10px 0'
 	)
 		tbody
 			tr
 				td.button-td(
-					style='border-radius: 0px; background: #ffffff'
+					style="border-radius: 0px; background: #ffffff"
 				)
 					a.button-a(
-						target='_blank',
+						target="_blank",
 						href=href,
-						style='background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase'
+						style="min-width: 75px; text-align: center; background: #ffffff; border: 1px solid #25355a; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #25355a; display: block; border-radius: 0px; text-transform: uppercase"
 					)
 						block
-	div.clearfix(
-		style='clear: both;'
+	.clearfix(
+		style="clear: both"
 	)
 
 mixin button-alt(href, float)
 	<!-- Button -->
 	table.center-on-narrow(
-		role='presentation',
-		cellspacing='0',
-		cellpadding='0',
-		border='0',
-		style=float ? "float: " + float + "; padding: 10px 0" : "margin: auto; padding: 10px 0"
+		role="presentation",
+		cellspacing="0",
+		cellpadding="0",
+		border="0",
+		style=float ? 'float: ' + float + '; padding: 10px 0' : 'margin: auto; padding: 10px 0'
 	)
 		tbody
 			tr
 				td.button-td(
-					style='border-radius: 0px; background: #ffffff'
+					style="border-radius: 0px; background: #ffffff"
 				)
 					a.button-a(
-						target='_blank',
+						target="_blank",
 						href=href,
-						style='background: #007fa3; border: 1px solid #007fa3; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #ffffff; display: block; border-radius: 0px; text-transform: uppercase'
+						style="min-width: 75px; text-align: center; background: #007fa3; border: 1px solid #007fa3; font-family: arial, sans-serif; font-size: 12px; line-height: 12px; font-weight: bold; text-decoration: none; padding: 14px; color: #ffffff; display: block; border-radius: 0px; text-transform: uppercase"
 					)
 						block
-	div.clearfix(
-		style='clear: both;'
+	.clearfix(
+		style="clear: both"
 	)
